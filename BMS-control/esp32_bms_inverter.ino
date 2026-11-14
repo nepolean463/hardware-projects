@@ -107,7 +107,7 @@ bool readPackVoltage(float &voltageV) {
   } else {
     result = bms.readHoldingRegisters(PACK_VOLTAGE_REGISTER, 1);
   }
-  if (result != bms ku8MBSuccess) {
+  if (result != bms.ku8MBSuccess) {
     Serial.printf("BMS Modbus read failed (code 0x%02X)\n", result);
     return false;
   }
